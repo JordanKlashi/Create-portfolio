@@ -132,9 +132,27 @@ const projectsData = [
 const filterData = projectsData.filter(project => project.id === 7);
 
   return (
-    
-        <Project  project={filterData}/>
-
+    <>
+    <div className="content">
+      <div className="content-style">
+        <div className="website">
+          <h2 className="website-title">Mes projets</h2>
+          <div className="imgtestorder">
+            <div className="imgtest" src="./data/img/photoSite/projet10/photo1.JPG" alt="test">Projet 1</div>
+            <div className="imgtest" src="./data/img/photoSite/projet10/photo1.JPG" alt="test">Projet 2</div>
+            <div className="imgtest" src="./data/img/photoSite/projet10/photo1.JPG" alt="test">Projet 3</div>
+          </div>
+          <div className="website-tags">
+            <p className="website-tags_type">HTML</p>
+            <p className="website-tags_type">Javascript</p>
+            <p className="website-tags_type">SEO & Gestion de projet</p>
+            <p className="website-tags_type">React</p>
+          </div>
+        </div>
+      </div>
+    </div>
+        {/* <Project  project={filterData}/> */}
+</>
   );
 };
 

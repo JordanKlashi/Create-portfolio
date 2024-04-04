@@ -16,21 +16,6 @@ function about() {
           <Collapse btnText={"Ma réorientation"} text={"après 3 ans les conditions changent, les valeurs ne me correspondent plus, mais j'aime toujours autant l'informatique, je prend donc ma première pause, sur ses 10 dernières années,"} />
           <Collapse btnText={"Mon Credeau"} text={"Je compte devenir un developpeur confirmé, je suis passionné et rien ne pourra m'arrêter maintenant que j'en ai la certitude."} />
           </div>
-          {/* <p>J'ai toujours été passionnées par l'informatique en règle général,
-             depuis mon plus jeune âge je m'amusais a créer des bouts de code qui servait
-              juste a lancer une page internet des milliers de fois, ce qui avait pour unique but d'embêter mes amies,
-              entre temps la vie a suivis son cours, diplômé Educateur, j'aime le contact social,
-              mais ce métier aussi beau soit-il, ne correspond pas a mes attentes, 
-              je décide de garder ce côtés social mais cette fois-ci dans la vente,
-              je m'y sens bien mais il me manque quelque chose, je décide de reprendre le chemin,
-              je me dirige vers le conseil mais cette fois-ci en relation avec l'informatique, 
-              et je finis par me rendre compte que ce qui me passionne c'est certes aidés les personnes,
-              mais c'est surtout de régler des problématiques, alors au début j'assiste mais je deviens
-              rapidement un bon élément et je régle les problèmes plus complexes qui nécessite de 
-              communiquer avec les ingénieurs d'une multinationale américaine, et depuis ce moment 
-              l'informatique ne m'a plus jamais quittés, j'adore ce que je fais, mais j'en veux plus,
-              je me rends compte de mon erreur et décide de repartir dans ce que j'ai toujours 
-              voulu faire au fond de moi, l'informatique, </p> */}
         </div>
       </div>  
     </div>

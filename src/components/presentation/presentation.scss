@@ -50,16 +50,16 @@
         }
 
         &_contact {
-            background-color: grey;
-            opacity:0.7;
+            opacity:0.9;
             padding:40px;
             display:flex;
             flex-direction: row;
             align-items: center;
             gap:30px;
            & img{
+            border-radius: 360px;
             width: 50px;
-            border:2px white solid;
+            object-fit: cover;
            } 
         }
     }

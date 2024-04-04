@@ -17,8 +17,8 @@ function Home() {
             <video id='background-video' src={videoSrc} autoPlay muted loop></video>
             <div className='container'>
                 <Presentation />
-                {/* <About /> */}
-                <Website />
+                {/* <About />  */}
+                {/* <Website /> */}
             </div>            
         </div>
 
