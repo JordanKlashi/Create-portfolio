@@ -1,0 +1,162 @@
+.circle{
+    position:absolute;
+    border:1px #836A21 solid;
+    background-color: #836A21;
+    z-index: -10;
+    top:0;
+    left:0;
+    width:25%;
+    height:35%;
+    border-radius: 50%;
+    animation:flycircle 25s ease-in-out infinite;
+    border:2px black solid;
+}    
+.circle2{
+    position:absolute;
+    border:1px #836A21 solid;
+    background-color: #836A21;
+    z-index: -5;
+    top:0;
+    left:0;
+    width:25%;
+    height:35%;
+    border-radius: 50%;
+    animation:flycircle 30s ease-in-out infinite;
+    border:2px black solid;
+}  
+.circle3{
+    position:absolute;
+    border:1px  solid;
+    background-color: #68c6c5;
+    z-index: -5;
+    top:0;
+    left:0;
+    width:15%;
+    height:25%;
+    border-radius: 50%;
+    animation:flycircle 40s ease-in-out infinite;
+    border:2px black solid;
+}   
+@keyframes flycircle {
+10%{
+    top:20%;
+    left:20%;
+}
+20%{
+    top:35%;
+    left:15%;
+}
+30%{
+    top:40%;
+    left:55%;
+}
+40%{
+    top:50%;
+    left:50%;
+}
+50%{
+    top:65%;
+    left:65%
+}
+60%{
+    top:50%;
+    left:50%;
+}
+70%{
+    top:40%;
+    left:55%;
+}
+80%{
+    top:35%;
+    left:15%;
+}
+20%{
+    top:20%;
+    left:20%;
+}
+100%{
+    top:0%;
+    left:0%;
+}
+}
+.tringle{
+    width: 0;
+    height: 0;
+    border-left: 10% solid transparent;
+    border-right:5% solid transparent;
+    border-bottom: 10% solid #68c6c5;
+    position:absolute;
+    z-index: -5;
+    bottom:0;
+    left:0;
+    animation:flycircle 60s ease-in-out infinite;
+}
+
+@keyframes flytringle {
+    5%{
+        bottom:20%;
+        left:20%;
+    }
+    15%{
+        bottom:35%;
+        left:15%;
+    }
+    35%{
+        bottom:40%;
+        left:55%;
+    }
+    43%{
+        bottom:50%;
+        left:50%;
+    }
+    50%{
+        bottom:65%;
+        left:65%
+    }
+    65%{
+        top:50%;
+        left:50%;
+    }
+    80%{
+        top:35%;
+        left:15%;
+    }
+    90%{
+        top:20%;
+        left:20%;
+    }
+    100%{
+        top:0%;
+        left:0%;
+    }
+}
+.custom-shape {
+    width: 40%;
+    height: 70%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: #836A21;
+    position:fixed;
+    top:10%;
+    left:60%;
+    border:1px black solid;
+    z-index: -100;
+}
+.rhombus {
+    width:21%;
+    height:45%;
+    transform: rotate(45deg);
+    background-color: #68c6c5;
+    position:fixed;
+    top:14%;
+    left:6%;
+    border:black 1px solid;
+    z-index:-105;
+}
+
+  
+  .animated-text {
+    overflow: hidden; /* Pour cacher le texte qui dépasse */
+    white-space: nowrap; /* Pour empêcher le texte de passer à la ligne */
+    font-family: "Roboto Mono", monospace ;
+    color:rgb(33, 230, 164);
+  }

@@ -1,0 +1,41 @@
+.project{
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: column;
+    width:80%;
+    &-tags{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width:100%;
+        padding:50px;
+        &_type{
+            padding:5px 10px;
+            border:1px solid #e5e7eb;
+            border-radius:25px;
+            color: aquamarine;
+            opacity:0.9;
+        }
+        &_link{
+            text-decoration: none;
+            padding:15px;
+            border:1px solid #e5e7eb;
+            border-radius:360px;
+            color:aquamarine;
+            
+        } 
+    }
+}
+.imgtest{
+    width:200px;
+    height:150px;
+    border:1px red solid;
+    &order{
+        display:flex;
+        flex-direction: row;
+        gap:30px;
+        padding:30px;
+    }
+}
+

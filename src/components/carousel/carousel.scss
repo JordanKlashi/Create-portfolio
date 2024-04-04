@@ -1,0 +1,41 @@
+.carrousel {
+    display: flex;
+    flex-direction:row;
+    padding-bottom: 15px;
+    align-items: center;
+    gap:10px;
+    &-index {
+        display:flex;
+        flex-wrap: nowrap;
+        color: $var-color-gold;
+      }
+    &-style{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  .active {
+    width: 100%;
+  }
+
+  .arrow{
+    &-right{
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid $var-color-gold;
+    }
+    &-left {
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid $var-color-gold;
+      margin-right:-20px;
+    }
+  }
+  

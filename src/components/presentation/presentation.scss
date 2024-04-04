@@ -1,0 +1,99 @@
+.presentation {
+    padding: 50px;
+    &-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        
+        &_sub {
+            width: 100px;
+            padding: 30px;
+            font-size: 1.5rem;
+            width:400px;
+
+            &_span{
+                font-size:1rem;
+                font-weight:lighter;
+            }
+        }
+        .presentation-animation{
+            font-family: "Roboto Mono", monospace ;
+            color:rgb(33, 230, 164);
+        }
+    }
+
+    // &-profil {
+    //     width: 200px;
+    //     height: 300px;
+    //     margin: 20px 0 0 70px;
+    //     float: left;
+    //     border-radius: 90px;
+    //     background-image: url(../../img/2.jpg);
+    //     border: 2px black solid;
+    //     background-position: 55% 25%;
+    //     background-size: 360px;
+    // }
+
+    &-tags {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+        gap: 5px;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        & h3 {
+            width:100%;
+            font-size: 1.5rem;
+        }
+
+        &_contact {
+            background-color: grey;
+            opacity:0.7;
+            padding:40px;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            gap:30px;
+           & img{
+            width: 50px;
+            border:2px white solid;
+           } 
+        }
+    }
+}
+
+@media (max-width: 992px) {
+.presentation{
+        &-tags {
+            padding-left: 0px;
+        }
+        &-profil{
+            width:300px;
+        }
+    }
+        .presentation-info{
+            flex-direction: column-reverse;
+            &_sub{
+                width:350px;
+            }
+        }
+}
+
+@media (max-width: 500px) {
+    .presentation {
+        &-profil {
+            margin: 0px;
+            width: 250px;
+        }
+        &-info {
+            flex-direction: column-reverse;
+            &_sub {
+                width: 200px;
+            }
+        }
+        
+    }
+}

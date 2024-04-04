@@ -1,0 +1,15 @@
+.about{
+    border: red solid 1px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:400px;
+    & img{
+        border-radius:360px;
+        width:150px;
+        height:150px;
+        object-fit: cover;
+        padding-top:25px;
+    }
+}
