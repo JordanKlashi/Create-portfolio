@@ -23,17 +23,6 @@
         }
     }
 
-    // &-profil {
-    //     width: 200px;
-    //     height: 300px;
-    //     margin: 20px 0 0 70px;
-    //     float: left;
-    //     border-radius: 90px;
-    //     background-image: url(../../img/2.jpg);
-    //     border: 2px black solid;
-    //     background-position: 55% 25%;
-    //     background-size: 360px;
-    // }
 
     &-tags {
         display: flex;
@@ -43,12 +32,6 @@
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
-
-        & h3 {
-            width:100%;
-            font-size: 1.5rem;
-        }
-
         &_contact {
             opacity:0.9;
             padding:40px;
@@ -60,6 +43,9 @@
             border-radius: 360px;
             width: 50px;
             object-fit: cover;
+            &:hover{
+                transform:scale(1.2)
+            }
            } 
         }
     }

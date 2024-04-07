@@ -1,9 +1,7 @@
+import React, { useState, useEffect } from 'react';
 
-import Project from '../project/project.jsx'
-
-const Website = () => {
-
-const projectsData = [
+const Website = ({ onProjectSelect }) => {
+  const projectsData  = [
     { 
       id:0,
       title: 'Premiers pas sur le langage HTML', 
@@ -13,7 +11,7 @@ const projectsData = [
         {src: "./data/img/photoSite/projet1/photo3.JPG"},
       ],
       description: "Description du projet: Prise en main d'un site déjà coder en HTML & CSS sur lequelle j'ai effectué des modifications, l'ajout de la section membres, l'ajout d'un nouveaux boutons pour récupérer les nouveaux horaires ", 
-      type: 'HTML & CSS', 
+      type: 'HTML', 
       url: 'https://jordanklashi.github.io/Projet-2/',
       code: 'https://github.com/JordanKlashi/Projet-2' 
     },
@@ -26,7 +24,7 @@ const projectsData = [
         {src: './data/img/photoSite/projet2/photo3.JPG'}
       ],
       description: "Description du projet: Approfondir ses connaissances en HTMl & CSS, mettre en place son environnement de développement, découpage de la maquette, intégrez le header du projet, ajout d'un formulaire de recherche, ajout de filtres, réalisations de carte, intégrez des conteneur, implémentez le footer, mettre en place le responsive du site, vérifiez la qualité du code", 
-      type: 'HTML & CSS', 
+      type: 'HTML', 
       url: 'https://jordanklashi.github.io/Projet-3/',
       code: 'https://github.com/JordanKlashi/Projet-3' 
     },
@@ -38,7 +36,7 @@ const projectsData = [
         {src: './data/img/photoSite/projet3/photo2.JPG'},
         {src: './data/img/photoSite/projet3/photo3.JPG'}
       ],      description: "Description du projet : Initiation a Sass, mettre en place l'environnement de développement, intégrez la version mobile, créez des animations, vérifiez la qualité du code ",
-      type: 'HTML & SCSS',
+      type: 'HTML',
       url: 'https://jordanklashi.github.io/Projet-4/index.html',
       code: 'https://github.com/JordanKlashi/Projet-4'  
     },
@@ -61,7 +59,7 @@ const projectsData = [
         {src: './data/img/photoSite/projet5/photo1.JPG'}, 
         {src: './data/img/photoSite/projet5/photo2.JPG'},
         {src: './data/img/photoSite/projet5/photo3.JPG'}
-      ],      description: "Description du projet : Réalisation d'un site pour une srcgraphe en javascript, communiquer avec une API Resfull, création d'une page de connexion utilisateur fonctionnel, créez une modale sur laquelle on ajoute dynamiquement des srcs sur le site", 
+      ],      description: "Description du projet : Réalisation d'un site pour une photographe en javascript, communiquer avec une API Resfull, création d'une page de connexion utilisateur fonctionnel, créez une modale sur laquelle on ajoute dynamiquement des photos sur le site", 
       type: 'Javascript',
       url: 'https://jordanklashi.github.io/Projet-6/',
       code: 'https://github.com/JordanKlashi/Projet-6'  
@@ -75,7 +73,7 @@ const projectsData = [
         {src: './data/img/photoSite/projet6/photo3.JPG'},
       ],
       description: "Description du projet : Mise en situation en entreprise, présentation de la planification, présentation de la solution technique, présentation de la veille, spécifications techniques ", 
-      type: 'Gestion de projet',
+      type: 'SEO',
       url: 'https://jordanklashi.github.io/Projet-7/',
       code: 'https://github.com/JordanKlashi/Projet-7', 
     },
@@ -93,7 +91,7 @@ const projectsData = [
     },
     { 
       id:7,
-      title: "Optimisez le référencement d'un site de srcgraphe", 
+      title: "Optimisez le référencement d'un site de photographe", 
       img:[ 
         {src: "./data/img/photoSite/projet8/photo1.JPG"}, 
         {src: './data/img/photoSite/projet8/photo2.JPG'},
@@ -111,7 +109,7 @@ const projectsData = [
         {src: './data/img/photoSite/projet9/photo2.JPG'},
         {src: './data/img/photoSite/projet9/photo3.JPG'}
       ],      description: 'Description du projet : Découverte des outils de débogage, react developper tools, créez des tests unitaire, présentation des erreurs et des solutions apportés', 
-      type: 'Optimisation et debug',
+      type: 'SEO',
       url: 'https://jordanklashi.github.io/Debuggez-une-application-React.JS-main/' ,
       code: 'https://github.com/JordanKlashi/Debuggez-une-application-React.JS-main' 
     },
@@ -128,32 +126,45 @@ const projectsData = [
       code: 'https://github.com/JordanKlashi/project-11',
     },
   ];
+  const [currentStartIndex, setCurrentStartIndex] = useState(0);
+  const [activeFilter, setActiveFilter] = useState('All');
 
-const filterData = projectsData.filter(project => project.id === 7);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentStartIndex(currentIndex => (currentIndex + 3) % filteredProjects.length);
+    }, 5000); // Change tous les 3 secondes
+
+    return () => clearInterval(intervalId);
+  }, [activeFilter, projectsData.length]);
+
+  const filteredProjects = projectsData.filter(project => 
+    activeFilter === 'All' || project.type === activeFilter
+  );
 
   return (
-    <>
     <div className="content">
       <div className="content-style">
         <div className="website">
           <h2 className="website-title">Mes projets</h2>
-          <div className="imgtestorder">
-            <div className="imgtest" src="./data/img/photoSite/projet10/photo1.JPG" alt="test">Projet 1</div>
-            <div className="imgtest" src="./data/img/photoSite/projet10/photo1.JPG" alt="test">Projet 2</div>
-            <div className="imgtest" src="./data/img/photoSite/projet10/photo1.JPG" alt="test">Projet 3</div>
-          </div>
-          <div className="website-tags">
-            <p className="website-tags_type">HTML</p>
-            <p className="website-tags_type">Javascript</p>
-            <p className="website-tags_type">SEO & Gestion de projet</p>
-            <p className="website-tags_type">React</p>
+          <div className="filter-buttons">
+              {['All', 'HTML', 'Javascript', 'SEO', 'React'].map((filter) => (
+                <button key={filter} onClick={() => setActiveFilter(filter)}>
+                  {filter}
+                </button>
+              ))}
+            </div>
+          <div className="website-card">
+            {filteredProjects.slice(currentStartIndex, currentStartIndex + 3).map(project => (
+              <div key={project.id} className="imgtest" onClick={() => onProjectSelect(project)}>
+                <img src={project.img[0].src} alt="Project Image" />
+                <div>{project.title}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
-        {/* <Project  project={filterData}/> */}
-</>
   );
 };
 
-export default Website
+export default Website;

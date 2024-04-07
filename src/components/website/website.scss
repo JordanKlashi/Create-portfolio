@@ -1,23 +1,72 @@
-.website{
-    display:flex;
+.website {
+    display: flex;
     justify-content: right;
     align-items: center;
     flex-direction: column;
-    width:80%;
-    &-tags{
+    width: 80%;
+    color: aquamarine;
+
+    .filter-buttons {
+        margin-bottom: 20px;
+
+        button {
+            margin: 0 10px;
+            padding: 5px 10px;
+            border: 1px solid aquamarine;
+            background-color: transparent;
+            color: aquamarine;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: aquamarine;
+                color: white;
+            }
+        }
+    }
+    .website-card{
         display:flex;
         flex-direction: row;
+    }
+    .imgtest {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid aquamarine;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        img {
+            width: 100%; // Ajustez selon le besoin
+            height: 100px; // Ajustez selon le besoin
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: rgba(2, 2, 73, 0.123);
+        }
+    }
+
+    &-tags {
+        display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        width:100%;
-        padding:50px;
-        &_type{
-            padding:5px 10px;
-            border:1px solid #e5e7eb;
-            border-radius:25px;
+        width: 100%;
+        padding: 50px;
+
+        &_type {
+            padding: 5px 10px;
+            border-radius: 25px;
             color: aquamarine;
-            opacity:0.9;
+            opacity: 0.9;
+
+            &:hover {
+                background-color: aquamarine;
+                color: white;
+            }
         }
     }
 }
-
-

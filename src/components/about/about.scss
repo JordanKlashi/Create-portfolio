@@ -1,10 +1,10 @@
 .about{
-    border: red solid 1px;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width:400px;
+    animation: comefromtop 4s ease-in;
     & img{
         border-radius:360px;
         width:150px;
@@ -13,3 +13,18 @@
         padding-top:25px;
     }
 }
+
+@keyframes comefromtop {
+    0%{
+        transform: translatey(-200%);
+        opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        transform: translatey(0);
+        opacity:1;
+    }
+}
+

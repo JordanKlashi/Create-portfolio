@@ -14,7 +14,6 @@ function presentation() {
     ]
 
     return (
-        <div className="sidebar">
             <div className='presentation'>
             <div className='presentation-info'>
                 <div className='presentation-info_sub'>
@@ -25,8 +24,6 @@ function presentation() {
                 
             </div>
             <div className='presentation-tags'>
-                <p>A propos</p>
-                <p>Projet</p>
                 <div className="presentation-tags_contact">
                     {Logo.map((logo, index) =>
                     <a key={index} href={logo.url}><img src={logo.img} alt={logo.url}/></a>
@@ -36,7 +33,6 @@ function presentation() {
                 </div>
             </div>
             </div>
-        </div>
     )
 }
 export default presentation
