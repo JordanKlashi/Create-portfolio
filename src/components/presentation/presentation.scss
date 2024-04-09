@@ -7,19 +7,14 @@
         gap: 50px;
         
         &_sub {
-            width: 100px;
             padding: 30px;
-            font-size: 1.5rem;
-            width:400px;
-
-            &_span{
-                font-size:1rem;
-                font-weight:lighter;
+            font-size: 1.2rem;
+            color:$var-color-green;
+            & p:hover{
+                background-color: rgba(128, 128, 128, 0.288);
+                border-radius:25px;
+                padding:10px;
             }
-        }
-        .presentation-animation{
-            font-family: "Roboto Mono", monospace ;
-            color:rgb(33, 230, 164);
         }
     }
 
@@ -41,7 +36,7 @@
             gap:30px;
            & img{
             border-radius: 360px;
-            width: 50px;
+            width: 40px;
             object-fit: cover;
             &:hover{
                 transform:scale(1.2)

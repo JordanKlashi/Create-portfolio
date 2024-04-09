@@ -1,72 +1,157 @@
 .website {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $var-color-secondary;
+  margin: auto;
+.website-title{
+  color:$var-color-green;
+  text-align: center;
+  width:100%;
+}
+  .carousel-controls {
     display: flex;
-    justify-content: right;
     align-items: center;
-    flex-direction: column;
-    width: 80%;
-    color: aquamarine;
-
-    .filter-buttons {
-        margin-bottom: 20px;
-
-        button {
-            margin: 0 10px;
-            padding: 5px 10px;
-            border: 1px solid aquamarine;
-            background-color: transparent;
-            color: aquamarine;
-            border-radius: 5px;
-            cursor: pointer;
-
-            &:hover {
-                background-color: aquamarine;
-                color: white;
-            }
-        }
+    justify-content: space-between;
+    width: 100%;
+    .fa-chevron-left, .fa-chevron-right {
+      font-size: 24px;
+      cursor: pointer;
+      &:hover {
+        color: $var-color-green;
+      }
     }
-    .website-card{
-        display:flex;
-        flex-direction: row;
+  }
+
+  .website-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    margin: 20px 0;
+  }
+
+  .imgtest {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-style: preserve-3d;
+    opacity: 0.5; 
+
+    img {
+      width: 350px;
+      height: auto;
+      height: 200px;
+      border-radius: 8px;
+      object-fit: cover;
     }
-    .imgtest {
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid aquamarine;
-        border-radius: 8px;
-        text-align: center;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+  }
 
-        img {
-            width: 100%; // Ajustez selon le besoin
-            height: 100px; // Ajustez selon le besoin
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        &:hover {
-            transform: scale(1.05);
-            background-color: rgba(2, 2, 73, 0.123);
-        }
+  .imgtest:first-child {
+    transform: scale(0.8) rotateY(-30deg);
+    background-color: rgba(128, 128, 128, 0.164);
+    &:hover{
+      color:$var-color-green;
+      transform:scale(1) rotateY(-30deg)
     }
 
-    &-tags {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        padding: 50px;
+  }
 
-        &_type {
-            padding: 5px 10px;
-            border-radius: 25px;
-            color: aquamarine;
-            opacity: 0.9;
-
-            &:hover {
-                background-color: aquamarine;
-                color: white;
-            }
-        }
+  .imgtest:last-child {
+    transform: scale(0.8) rotateY(30deg);
+    background-color: rgba(128, 128, 128, 0.164);
+    &:hover{
+      color:$var-color-green;
+      transform:scale(1) rotateY(30deg)
     }
+
+  }
+
+  
+  .imgtest.middle {
+    color:white;
+    opacity: 1; 
+    transform: scale(1.1); 
+    background-color: rgba(128, 128, 128, 0.164);
+    &:hover{
+      color:$var-color-green;
+      transform: scale(1.2);
+    }
+  }
+
+  &-tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px;
+
+    &_type {
+      padding: 5px 10px;
+      border-radius: 25px;
+      color: $var-color-green;
+      opacity: 0.9;
+      &:hover {
+        background-color: $var-color-green;
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width:1700px) {
+  .imgtest.middle {
+    width:300px;
+    & img {
+      width:300px;
+    }
+  }
+  .imgtest:first-child {
+    width:300px;
+    & img {
+      width:300px;
+    }
+  }
+  .imgtest:last-child {
+    width:300px;
+    & img {
+      width:300px;
+    }
+  }
+}
+@media (max-width:1500px) {
+    .imgtest.middle {
+    width:250px;
+    & img {
+      width:250px;
+    }
+  }
+  .imgtest:first-child {
+    width:250px;
+    & img {
+      width:250px;
+    }  }
+
+  .imgtest:last-child {
+    width:250px;
+    & img {
+      width:250px;
+    }  }
+}
+@media (max-width:900px) {
+  .imgtest:first-child {
+    display:none;
+  }
+
+  .imgtest:last-child {
+    display:none;
+  }
+
+  .carousel-controls{
+    .fa-chevron-left, .fa-chevron-right{
+      padding:30px;
+    }
+  }
 }

@@ -1,28 +1,28 @@
 $var-color-primary:white;
-$var-color-secondary:rgb(15 23 42);
-$var-color-tertiary:rgb(15 23 42);
-$var-color-background: rgb(15 23 42); 
+$var-color-secondary:#ffffff8f;
+$var-color-background: rgb(1, 2, 3); 
 $var-color-gold:#e1ab49;
-// linear-gradient(to left, #e1ab49, #68c6c5  )
-body{
+$var-color-green:#21e6a4;
+
+body {
     margin:30px 20px;
     color: $var-color-primary;
     background-color: $var-color-background;
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto Mono", monospace;
 }
-.title{
+
+.title {
     font-size:2rem;
 }
+
 .container {
     width: 100%;
     display: flex;
-    height: 100vh;
-    overflow-y: auto;
+    justify-content: center;
 }
 
 .sidebar {
-    width: 35%;
-    overflow: hidden;
+    width: 25%;
     position: relative;
     animation: moveto 6s ease-in;
 }
@@ -33,7 +33,6 @@ body{
     left: 0;
     right: -17px; 
     bottom: 0;
-    overflow-y: scroll;
     padding-right: 17px;
 }
 
@@ -42,14 +41,13 @@ body{
         width: 100%;
     }
     100% {
-        width: 35%;
+        width: 25%;
     }
 }
 
 .content {
     width: 65%;
     display: flex;
-    overflow-y: hidden;
     justify-content: center;
     &-style {
         padding: 100px;
@@ -57,11 +55,13 @@ body{
 }
 
 .Header {
-    width: 400px;
-    height: 200px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    & button{
+        font-family: "Roboto Mono", monospace;
+        cursor: pointer;
+
+    }
 }
 
 .presentation-try {
@@ -71,20 +71,21 @@ body{
     gap: 20px;
     cursor: pointer;
 
-
+    &.active .presentation-tiret,
     &:hover .presentation-tiret {
         width: 60px; 
     }
 
+    &.active .presentation-btn,
     &:hover .presentation-btn {
-        color: white; 
-        background-color: aquamarine; 
+        color: $var-color-green; 
+        font-size:larger;
     }
 }
 
 .presentation-tiret {
-    border: 1px aquamarine solid;
-    background-color: aquamarine;
+    border: 1px $var-color-green solid;
+    background-color: $var-color-green;
     height: 1px;
     width: 30px;
     transition: width 0.3s ease;
@@ -93,14 +94,14 @@ body{
 .presentation-btn {
     background-color: rgba(2, 2, 73, 0.123);
     opacity: 0.8; 
-    color: aquamarine; 
+    color:$var-color-secondary;
     font-size: 1rem;
     border-radius: 25px;
     padding: 5px 10px;
     border: none;
     transition: color 0.3s ease, background-color 0.3s ease; 
 }
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
     .container {
         flex-direction: column;
         height: auto; 
@@ -118,5 +119,9 @@ body{
         overflow-y: auto; 
         padding-right: 0px; 
         height:100%;
+        width:100%;
     }
+}
+@media (max-width: 900px) {
+    
 }

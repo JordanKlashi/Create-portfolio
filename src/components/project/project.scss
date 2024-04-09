@@ -6,13 +6,17 @@
   color: aquamarine;
   margin-top: 20px;
 }
-
+.project-images{
+  display:flex;
+  flex-direction: row;
+  
+}
 .project-images img {
-  margin: 5px; /* Espacement réduit */
+  margin: 5px; 
   border-radius: 8px;
-  width: auto; /* S'adapte à la hauteur */
-  height: 150px; /* Hauteur fixe pour contrôler la taille des images */
-  object-fit: cover; /* Garde le ratio d'aspect tout en couvrant l'espace défini */
+  width: auto; 
+  height: 150px; 
+  object-fit: cover; 
   transition: transform 0.3s ease;
 }
 
@@ -47,7 +51,7 @@
 }
 
 .link img {
-  height: 40px; /* Ajustez la taille des icônes */
+  height: 40px; 
   border-radius:25px;
   &:hover{
     transform: scale(1.2);

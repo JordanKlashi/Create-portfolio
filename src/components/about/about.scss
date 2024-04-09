@@ -1,16 +1,40 @@
 .about{
     display:flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:400px;
-    animation: comefromtop 4s ease-in;
+    width:800px;
+    animation: comefromtop 2s ease-in;
+    padding-top:100px;
     & img{
-        border-radius:360px;
-        width:150px;
-        height:150px;
+        width:200px;
+        height:200px;
         object-fit: cover;
-        padding-top:25px;
+        padding:25px 0px;
+        border-radius: 50%;
+    }
+    &-p{
+        animation:getit 4s ease-in;
+        &1{
+            animation:getit 6s ease-in;
+        }
+        &2{
+            animation:getit 8s ease-in;
+        }
+        &3{
+            animation:getit 10s ease-in;
+        }
+    }
+    
+}
+@keyframes getit {
+    0%{
+        opacity:0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
     }
 }
 
@@ -27,4 +51,5 @@
         opacity:1;
     }
 }
+
 

@@ -3,7 +3,6 @@ import Home from './page/home.jsx'
 import Contact from './page/contact.jsx'
 
 
-
 function App() {
   return (
     <Router>

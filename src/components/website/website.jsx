@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState  } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Website = ({ onProjectSelect }) => {
   const projectsData  = [
@@ -109,7 +111,7 @@ const Website = ({ onProjectSelect }) => {
         {src: './data/img/photoSite/projet9/photo2.JPG'},
         {src: './data/img/photoSite/projet9/photo3.JPG'}
       ],      description: 'Description du projet : Découverte des outils de débogage, react developper tools, créez des tests unitaire, présentation des erreurs et des solutions apportés', 
-      type: 'SEO',
+      type: 'React',
       url: 'https://jordanklashi.github.io/Debuggez-une-application-React.JS-main/' ,
       code: 'https://github.com/JordanKlashi/Debuggez-une-application-React.JS-main' 
     },
@@ -126,42 +128,50 @@ const Website = ({ onProjectSelect }) => {
       code: 'https://github.com/JordanKlashi/project-11',
     },
   ];
+
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
-  const [activeFilter, setActiveFilter] = useState('All');
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentStartIndex(currentIndex => (currentIndex + 3) % filteredProjects.length);
-    }, 5000); // Change tous les 3 secondes
 
-    return () => clearInterval(intervalId);
-  }, [activeFilter, projectsData.length]);
 
-  const filteredProjects = projectsData.filter(project => 
-    activeFilter === 'All' || project.type === activeFilter
-  );
+
+    const goToPrevious = () => {
+      setCurrentStartIndex(currentIndex => {
+        const newIndex = currentIndex - 1;
+
+        return newIndex < 0 ? (projectsData.length - 1) : newIndex;
+      });
+    };
+  
+    const goToNext = () => {
+      setCurrentStartIndex(currentIndex => {
+        const newIndex = currentIndex + 2;
+        return newIndex >= projectsData.length ? 0 : currentIndex + 1;
+      });
+    };
 
   return (
-    <div className="content">
-      <div className="content-style">
-        <div className="website">
-          <h2 className="website-title">Mes projets</h2>
-          <div className="filter-buttons">
-              {['All', 'HTML', 'Javascript', 'SEO', 'React'].map((filter) => (
-                <button key={filter} onClick={() => setActiveFilter(filter)}>
-                  {filter}
-                </button>
-              ))}
-            </div>
+      <div className="content">
+        <div className="content-style">
+          <div className="website">
+            <h2 className="website-title">Mes projets</h2>
+            <div className="carousel-controls">
+              <FontAwesomeIcon icon={faChevronLeft} onClick={goToPrevious} />
           <div className="website-card">
-            {filteredProjects.slice(currentStartIndex, currentStartIndex + 3).map(project => (
-              <div key={project.id} className="imgtest" onClick={() => onProjectSelect(project)}>
-                <img src={project.img[0].src} alt="Project Image" />
-                <div>{project.title}</div>
+            {projectsData.slice(currentStartIndex, currentStartIndex + 3).map((project, index) => (
+              <div
+                key={project.id}
+                className={`imgtest ${index === 1 ? 'middle' : ''}`} 
+                onClick={() => onProjectSelect(project)}
+              >
+                <div>Projet {project.id +1}</div>
+                <img src={project.img[0].src} alt="Project Logo" />
+                <div>{project.type}</div>
               </div>
             ))}
           </div>
+          <FontAwesomeIcon icon={faChevronRight} onClick={goToNext} />
         </div>
+      </div>
       </div>
     </div>
   );
