@@ -3,9 +3,21 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
-  color: aquamarine;
+  color: white;
   margin-top: 20px;
+  gap:35px;
+  font-family: "Orbitron", sans-serif;
 }
+.project-description{
+  text-align: justify;
+}
+.project-title{
+  color:aquamarine;
+  font-size:2rem;
+  text-align: center;
+}
+
+
 .project-images{
   display:flex;
   flex-direction: row;
@@ -24,20 +36,22 @@
   transform: scale(1.05);
   background-color: rgba(2, 2, 73, 0.123);
 }
+.project-description{
+  width:80%;
+}
 
 .project-tags {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%;
+  width: 50%;
   padding: 20px;
 }
-
 .tag {
   padding: 5px 10px;
   border-radius: 25px;
   background-color: transparent;
-  
+  border:1px solid white;
 }
 
 .link {
@@ -46,31 +60,37 @@
   padding: 5px 10px;
   margin: 0 5px;
   text-decoration: none;
-  color: aquamarine;
-  border-radius: 25px;
 }
 
 .link img {
-  height: 40px; 
-  border-radius:25px;
   &:hover{
     transform: scale(1.2);
   }
 }
 
-.back-button {
-  align-self: flex-start;
-  margin: 10px;
-  padding: 5px 10px;
-  font-size: 16px;
-  color: aquamarine;
-  background-color: transparent;
-  border: 1px solid aquamarine;
-  border-radius: 5px;
-  cursor: pointer;
+.imgWebsite{
+  width:50px;
+}
+.imgCode{
+  width:40px;
 }
 
-.back-button:hover {
-  background-color: aquamarine;
-  color: white;
+@media (max-width:900px) {
+  .project{
+    &-title{
+      padding-top:50px;
+      font-size:1.2rem;
+    }
+    &-images img{
+      width:250px;
+      object-fit: cover;
+    }
+    &-description{
+      width:100%;
+      text-align:justify;
+    }
+    &-tags {
+      width:100%
+    }
+  }
 }
