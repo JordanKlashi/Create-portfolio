@@ -1,23 +1,23 @@
 function About() {
   const texts = [       
     {     
-        t:"Bienvenue,",
+        t:"Bienvenue dans ma batcave !",
     },
     {      
-        t:"Je me présente, Jordan, Developpeur web. Je vous accueille dans ma batcave, c'est ici que je présente tous les projets que j'ai pu effectuer lors de ma formation. Ces projets visent à vous renseigner sur mes compétences actuelles.",
+        t:"Je suis Jordan, un développeur web passionné. Ici, je vous invite à découvrir les projets qui ont jalonné mon parcours de formation. Chaque projet est le reflet de mes compétences actuelles",
     },      
     {
-        t:"J'ai effectivement commencé par la base, le HTML, ce qui m'a permis de comprendre les rouages principaux du frontend, accompagné de son meilleur ami le CSS. J'ai ainsi découvert la joie des animations et du style.",
+        t:"Tout a commencé avec les bases : le HTML. C'est là que j'ai plongé dans les rouages du frontend, accompagné de son fidèle compagnon, le CSS. Ensemble, nous avons exploré l'univers des animations et du style, ouvrant ainsi les portes de la créativité.",
     },
     {      
-        t:"J'ai ensuite enchaîné sur mon premier langage de programmation, Javascript. Ce langage m'a énormément passionné, j’ai été séduit par toutes les fonctionnalités qu'il apportait.",
+        t:"Puis est venu le temps de ma première langue de programmation : Javascript. Ce langage m'a captivé par ses fonctionnalités variées et ses possibilités infinies. Chaque ligne de code était une nouvelle aventure, une opportunité de créer quelque chose de nouveau et d'utile.",
     },
     {      
-        t:"Finalement, je me suis arrêté sur React, et pour moi qui ai adoré Javascript, ça a été un virage assez simple : c'est tout simplement un mélange de HMTL & Javascript où les possibilités sont infinies. ",
+        t:"Enfin, j'ai découvert React. Pour quelqu'un qui adore Javascript, ce fut une transition naturelle. React m'a offert un terrain de jeu où HTML et Javascript se marient harmonieusement, ouvrant la voie à des possibilités illimitées de création.",
     },
     {      
-        t:"Je continue de faire des veilles technologiques test pour améliorer mes compétences et en découvrir de nouvelles. Je suis une personne passionnée de son métier et adore relever de nouveau défis."
-    }  
+        t:"Mais mon parcours ne s'arrête pas là. Je suis constamment en quête de nouvelles connaissances et de défis excitants. Mon prochain défi ? Maîtriser PHP, un langage puissant qui ouvre les portes du développement côté serveur."
+    },
 ];
 
   return (

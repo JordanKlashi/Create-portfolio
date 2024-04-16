@@ -34,14 +34,12 @@
         flex-direction: row;
         justify-content: center;
         gap: 50px;
-        width:500px;
         &_sub {
             padding: 30px;
             color:$var-color-green;
             &-p1{
                 width:0%;
                 animation:typewriterpres 2s 0.5s ease-out forwards;
-                border-right: 3px solid black; // Simule le curseur du typewriter
                 overflow: hidden;
                 display: inline-block;
                 white-space: nowrap;
@@ -51,7 +49,6 @@
             &-p2{
                 width:0%;
                 animation:typewriterpres 2s 2.5s ease-out forwards;
-                border-right: 3px solid black; // Simule le curseur du typewriter
                 overflow: hidden;
                 display: inline-block;
                 white-space: nowrap;
@@ -210,6 +207,7 @@
 
 @media (max-width: 500px) {
     .presentation {
+        padding:0px;
         &-profil {
             margin: 0px;
             width: 250px;
@@ -218,7 +216,9 @@
             flex-direction: column-reverse;
             &_sub {
                 width: 300px;
-                font-size:medium
+            }
+            & p {
+                font-size:16px;
             }
         }
         

@@ -5,56 +5,69 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 const Website = ({ onProjectSelect }) => {
   const projectsData  = [
     { 
+      id:9,
+      title: "Implémentez le front-end d'une application bancaire avec React", 
+      img:[ 
+        {src: './data/img/photoSite/projet10/photo1.png'}, 
+        {src: './data/img/photoSite/projet10/photo2.png'}
+      ],
+      onImage:"https://jordanklashi.github.io/project-11/",      
+      description: "Projet : Site complet en React-Redux, utilisation de MongoDB, appels d'API, hooks, actions, reducers, et toolkit Thunk.", 
+      type: 'React', 
+      url: 'https://jordanklashi.github.io/project-11/',
+      code: 'https://github.com/JordanKlashi/project-11',
+    },
+    { 
       id:0,
-      title: 'Premiers pas sur le langage HTML', 
+      title: 'Mes premiers pas sur le langage HTML', 
       img:[ 
         {src: "./data/img/photoSite/projet1/photo1.png"}, 
         {src: "./data/img/photoSite/projet1/photo2.png"},
       ],
       onImage:'https://jordanklashi.github.io/Projet-2/',
-      description: "Description du projet: Prise en main d'un site déjà coder en HTML & CSS sur lequelle j'ai effectué des modifications, l'ajout de la section membres, l'ajout d'un nouveaux boutons pour récupérer les nouveaux horaires. ", 
+      description: "Découverte du HTML : Amélioration d'un site existant en ajoutant une section membres et des boutons pour les nouveaux horaires.", 
       type: 'HTML', 
       url: 'https://jordanklashi.github.io/Projet-2/',
       code: 'https://github.com/JordanKlashi/Projet-2' 
     },
     { 
       id:1,
-      title: "Créez la page d'agence de voyage avec HMTL & CSS", 
+      title: "Créez la page d'agence de voyage en HMTL & CSS", 
       img:[ 
         {src: './data/img/photoSite/projet2/photo1.png'}, 
         {src: './data/img/photoSite/projet2/photo2.png'},
         {src: './data/img/photoSite/projet2/photo3.png'}
       ],
       onImage:'https://jordanklashi.github.io/Projet-3/',
-      description: "Description du projet: Approfondir ses connaissances en HTMl & CSS, mettre en place son environnement de développement, découpage de la maquette, intégrez le header du projet, ajout d'un formulaire de recherche, ajout de filtres, réalisations de carte, intégrez des conteneur, implémentez le footer, mettre en place le responsive du site, vérifiez la qualité du code", 
+      description: "Approfondissement HTML/CSS : Configuration de l'environnement de développement, découpage de la maquette, intégration du header, formulaire de recherche, filtres, cartes, conteneurs, footer, adaptation responsive et vérification de la qualité du code.", 
       type: 'HTML', 
       url: 'https://jordanklashi.github.io/Projet-3/',
       code: 'https://github.com/JordanKlashi/Projet-3' 
     },
     { 
       id:2,
-      title: "Améliorez l'interface d'un site mobile avec des animations SCSS", 
+      title: "Créez l'interface d'un site mobile avec des animations SCSS", 
       img:[ 
         {src: './data/img/photoSite/projet3/photo1.png'}, 
         {src: './data/img/photoSite/projet3/photo2.png'},
         {src: './data/img/photoSite/projet3/photo3.png'}
       ],
       onImage:"https://jordanklashi.github.io/Projet-4/index.html",      
-      description: "Description du projet : Initiation a Sass, mettre en place l'environnement de développement, intégrez la version mobile, créez des animations, vérifiez la qualité du code ",
+      description: "Initiation à Sass : Configuration de l'environnement, intégration de la version mobile, animations et vérification de la qualité du code.",
       type: 'HTML',
       url: 'https://jordanklashi.github.io/Projet-4/index.html',
       code: 'https://github.com/JordanKlashi/Projet-4'  
     },
     { 
       id:3,
-      title: 'Premiers pas sur le langage Javascript', 
+      title: 'Mes premiers pas sur le langage Javascript', 
       img:[ 
         {src: './data/img/photoSite/projet4/photo1.png'}, 
         {src: './data/img/photoSite/projet4/photo2.png'},
         {src: './data/img/photoSite/projet4/photo3.png'}
       ],
       onImage:"https://jordanklashi.github.io/Projet-5/",      
-      description: "Description du projet : Initiation a Javascript, réalisation d'un caroussel en javascript, découverte des fonctions et écouteurs d'évènements", 
+      description: "Initiation à JavaScript : Création d'un carrousel, exploration des fonctions et des écouteurs d'événements.", 
       type: 'Javascript', 
       url: 'https://jordanklashi.github.io/Projet-5/',
       code: 'https://github.com/JordanKlashi/Projet-5'  
@@ -68,20 +81,20 @@ const Website = ({ onProjectSelect }) => {
         {src: './data/img/photoSite/projet5/photo3.png'}
       ],
       onImage:"https://jordanklashi.github.io/Projet-6-Frontend/",      
-      description: "Description du projet : Réalisation d'un site pour une photographe en javascript, communiquer avec une API Resfull, création d'une page de connexion utilisateur fonctionnel, créez une modale sur laquelle on ajoute dynamiquement des photos sur le site", 
+      description: "Projet : Site pour photographe en JavaScript, communication avec API RESTful, création d'une page de connexion utilisateur fonctionnelle, ajout dynamique de photos via une modale.", 
       type: 'Javascript',
       url: 'https://jordanklashi.github.io/Projet-6-Frontend/',
       code: 'https://github.com/JordanKlashi/Projet-6'  
     },
     { 
       id:5,
-      title: 'Planifiez le développement du site de votre client', 
+      title: "Planifiez le développement d'un site", 
       img:[ 
         {src: './data/img/photoSite/projet6/photo1.png'}, 
         {src: './data/img/photoSite/projet6/photo2.png'}
       ],
       onImage:"./data/doc/gestion de projet 7.pdf",
-      description: "Description du projet : Mise en situation en entreprise, présentation de la planification, présentation de la solution technique, présentation de la veille, spécifications techniques ", 
+      description: "Projet en entreprise : Planification, solution technique, veille technologique, spécifications techniques.", 
       type: 'Gestion de projet',
       url: './data/doc/gestion de projet 7.pdf',
       code: 'https://github.com/JordanKlashi/Projet-7', 
@@ -93,7 +106,7 @@ const Website = ({ onProjectSelect }) => {
         {src: './data/img/photoSite/projet7/photo1.png'}, 
         {src: './data/img/photoSite/projet7/photo2.png'}
       ],
-      description: "Description du projet : Réalisation complet d'un site en React, découverte des composant réutilisable, React-router-dom, les props  ", 
+      description: "Projet : Site complet en React, utilisation de composants réutilisables, React Router DOM, utilisation des props, animations, carrousel.", 
       type: 'React',
       onImage:"https://jordanklashi.github.io/Projet-8-/", 
       url: 'https://jordanklashi.github.io/Projet-8-/',
@@ -107,7 +120,7 @@ const Website = ({ onProjectSelect }) => {
         {src: './data/img/photoSite/projet8/photo2.png'}
       ],
       onImage:"./data/doc/Lighthouse Report Viewer.pdf",      
-      description: "Description du projet : Découverte du SEO, listez les optimisations réalisables, optimisez les performances du site, optimisez le SEO technique, ajoutez le référencement local et réseaux sociaux, optimisez l'accessibilités du site, générer des rapport finaux constatant de l'optimisation ", 
+      description: "Projet SEO : Optimisations SEO, performances du site, référencement local et sur les réseaux sociaux, accessibilité améliorée, rapports finaux d'optimisation.", 
       type: 'SEO', 
       url: 'https://jordanklashi.github.io/Projet-9/',
       code: 'https://github.com/JordanKlashi/Projet-9' 
@@ -120,24 +133,11 @@ const Website = ({ onProjectSelect }) => {
         {src: './data/img/photoSite/projet9/photo2.png'}
       ],
       onImage:"https://jordanklashi.github.io/Projet-10/",      
-      description: 'Description du projet : Découverte des outils de débogage, react developper tools, créez des tests unitaire, présentation des erreurs et des solutions apportés', 
+      description: "Projet : Utilisation d'outils de débogage (React Developer Tools), création de tests unitaires, présentation des erreurs et solutions apportées.", 
       type: 'React',
       url: 'https://jordanklashi.github.io/Projet-10/' ,
       code: 'https://github.com/JordanKlashi/Debuggez-une-application-React.JS-main' 
-    },
-    { 
-      id:9,
-      title: "Implémentez le front-end d'une application bancaire avec React", 
-      img:[ 
-        {src: './data/img/photoSite/projet10/photo1.png'}, 
-        {src: './data/img/photoSite/projet10/photo2.png'}
-      ],
-      onImage:"https://jordanklashi.github.io/project-11/",      
-      description: "Description du projet : Réalisation complet d'un site en React-Redux, travailler avec une base de données Mongodb, faire des call API, utilisations des hook, découverte des actions, des reducers, du toolkit Thunk", 
-      type: 'React', 
-      url: 'https://jordanklashi.github.io/project-11/',
-      code: 'https://github.com/JordanKlashi/project-11',
-    },
+    }
   ];
 
   const [currentStartIndex, setCurrentStartIndex] = useState(1);

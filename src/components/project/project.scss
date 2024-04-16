@@ -4,7 +4,6 @@
   align-items: center;
   width: 80%;
   color: white;
-  margin-top: 20px;
   gap:35px;
   font-family: "Orbitron", sans-serif;
 }
@@ -16,8 +15,6 @@
   font-size:2rem;
   text-align: center;
 }
-
-
 .project-images{
   display:flex;
   flex-direction: row;
@@ -78,7 +75,6 @@
 @media (max-width:900px) {
   .project{
     &-title{
-      padding-top:50px;
       font-size:1.2rem;
     }
     &-images img{
