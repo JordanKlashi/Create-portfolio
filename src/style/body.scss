@@ -1,24 +1,38 @@
-$var-color-primary:white;
-$var-color-secondary:#ffffff8f;
-$var-color-background: rgb(1, 2, 3); 
-$var-color-gold:#e1ab49;
-$var-color-green:aquamarine;
-$var-font-title:"Orbitron", sans-serif;
-
+:root {
+    --color-primary: rgb(255, 255, 255);
+    --color-secondary: #ffffff;
+    --color-background: rgb(53, 121, 112);
+    --color-green: rgb(255, 255, 255);
+    --font-title: "Orbitron", sans-serif;
+    --back-card: rgba(128, 128, 128, 0.589);
+    --back-modal: rgba(0, 85, 74, 0.877);
+    --color-active: black;
+  }
+  
+  
+  .dark {
+    --color-primary: white;
+    --color-secondary: #ffffff8f;
+    --color-background: rgb(1, 2, 3);
+    --color-green: aquamarine;
+    --font-title: "Orbitron", sans-serif;
+    --back-card: rgba(128, 128, 128, 0.164);
+    --back-modal: rgba(41, 40, 40, 0.979);
+    --color-active: aquamarine;
+  }
 
 body {
-    color: $var-color-primary;
-    background-color: $var-color-background;
+    color: var(--color-primary);
+    background-color: var(--color-background);
     font-family: "Roboto Mono", monospace;
+    margin:0;
 }
 .body-title{
     display:none;
 }
-
 .title {
     font-size:2rem;
 }
-
 .container {
     position: relative;
     width: 100%;
@@ -41,7 +55,6 @@ body {
     .container {
         flex-direction: column;
         height: auto; 
-        overflow-y:scroll; 
     }
     .sidebar,
     .content {

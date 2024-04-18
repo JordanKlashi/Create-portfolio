@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  color: $var-color-secondary;
+  color: var(--color-secondary);
   margin: auto;
   font-family: "Orbitron", sans-serif;
 .website-title{
-  color:$var-color-green;
+  color:var(--color-green);
   text-align: center;
   width:100%;
   font-size:2rem;
@@ -21,7 +21,7 @@
       font-size: 24px;
       cursor: pointer;
       &:hover {
-        color: $var-color-green;
+        color: var(--color-active);
       }
     }
   }
@@ -54,9 +54,9 @@
 
   .imgtest:first-child {
     transform: scale(0.8) rotateY(-30deg);
-    background-color: rgba(128, 128, 128, 0.164);
+    background-color: var(--back-card);
     &:hover{
-      color:$var-color-green;
+      color:var(--color-green);
       transform:scale(1) rotateY(-30deg)
     }
 
@@ -64,9 +64,9 @@
 
   .imgtest:last-child {
     transform: scale(0.8) rotateY(30deg);
-    background-color: rgba(128, 128, 128, 0.164);
+    background-color: var(--back-card);
     &:hover{
-      color:$var-color-green;
+      color:var(--color-green);
       transform:scale(1) rotateY(30deg)
     }
 
@@ -74,12 +74,12 @@
 
   
   .imgtest.middle {
-    color:white;
+    color:var(--color-primary);
     opacity: 1; 
     transform: scale(1.1); 
-    background-color: rgba(128, 128, 128, 0.164);
+    background-color: var(--back-card);
     &:hover{
-      color:$var-color-green;
+      color:var(--color-green);
       transform: scale(1.2);
     }
   }
@@ -94,11 +94,11 @@
     &_type {
       padding: 5px 10px;
       border-radius: 25px;
-      color: $var-color-green;
+      color: var(--color-green);
       opacity: 0.9;
       &:hover {
-        background-color: $var-color-green;
-        color: white;
+        background-color: var(--color-green);
+        color: var(--color-primary);
       }
     }
   }

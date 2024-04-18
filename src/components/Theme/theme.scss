@@ -1,0 +1,32 @@
+.theme-toggle{
+  width:100%;
+  opacity:0;
+  transform:translateX(300px);
+  animation:apparition 0.5s 4s ease-out forwards; 
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-button .icon {
+  color: rgba(22, 192, 169, 0.671); 
+  font-size: 32px; 
+}
+
+.theme-toggle-button .moon-icon {
+  color: rgba(41, 40, 40, 0.979); 
+}
+@keyframes apparition {
+  100%{
+      opacity:1;
+      animation:none;
+      transform:translateX(0px)
+  }
+}

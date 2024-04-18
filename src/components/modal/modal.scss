@@ -10,7 +10,7 @@
 }
 
 .modal-content {
-  background: rgba(41, 40, 40, 0.979);
+  background: var(--back-modal);
   width: 68%; 
   max-height: 100vh; 
   overflow-y: auto; 
@@ -39,6 +39,6 @@
   right: 25px;
   cursor: pointer;
   &:hover{
-    color:$var-color-green;
+    color:var(--color-green);
   }
 }

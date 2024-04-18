@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%; // Utilise 100% de la largeur disponible jusqu'à un maximum de 800px
+    width: 100%;
     max-width: 800px;
     & img {
         width: 150px;
@@ -11,12 +11,12 @@
         padding: 25px 0px;
     }
     & h3 {
-        color:$var-color-green;
+        color:var(--color-green);
         text-align: center;
         width:100%;
         font-size:2rem;
         padding-bottom:80px;
-        font-family: $var-font-title;
+        font-family: "Orbitron", sans-serif;;
     }
 }
 .about-text {

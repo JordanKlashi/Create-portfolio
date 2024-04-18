@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: $var-color-secondary;
+    color: var(--color-secondary);
     margin: auto;
     &-title{
         font-size:2rem;
-        color: $var-color-green;
+        color: var(--color-green);
         text-align: center;
-        font-family: $var-font-title;
+        font-family: var(--font-title);
     }
     &-board{
         display:grid;
@@ -20,11 +20,11 @@
         gap:10px;
         flex-direction: column;
         padding:20px;
-        background-color: rgba(128, 128, 128, 0.164);
+        background-color: var(--back-card);
         margin:30px;
         &_title{
             text-align: center;
-            color:$var-color-green;
+            color:var(--color-green);
         }
         &_Fa{
             width:100%;

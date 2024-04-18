@@ -4,7 +4,7 @@ function About() {
         t:"Bienvenue dans ma batcave !",
     },
     {      
-        t:"Je suis Jordan, un développeur web passionné. Ici, je vous invite à découvrir les projets qui ont jalonné mon parcours de formation. Chaque projet est le reflet de mes compétences actuelles",
+        t:"Je vous invite à découvrir les projets qui ont jalonné mon parcours de formation. Chaque projet est le reflet de mes compétences actuelles.",
     },      
     {
         t:"Tout a commencé avec les bases : le HTML. C'est là que j'ai plongé dans les rouages du frontend, accompagné de son fidèle compagnon, le CSS. Ensemble, nous avons exploré l'univers des animations et du style, ouvrant ainsi les portes de la créativité.",
@@ -23,7 +23,7 @@ function About() {
   return (
       <div className="content">
           <div className="about">
-            <h3>A propos de moi</h3>
+            <h3>Présentation</h3>
               <div className='about-text'>
                   {texts.map((text, i) => (
                     <p className='about-text_anim'>{text.t}</p>

@@ -22,7 +22,7 @@ function Home() {
     };
 
     return (
-        <div className='container'>
+        <div className="container">
             <h1 className='body-title'>Portfolio Verbreuk Jordan Développeur Web</h1>
         <div className='video-background'>
             <video id='background-video' src={videoSrc} autoPlay muted loop></video></div> 

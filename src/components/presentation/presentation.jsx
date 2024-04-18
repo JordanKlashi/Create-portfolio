@@ -1,3 +1,5 @@
+import ThemeToggleButton from "../Theme/toogletheme";
+
 function Presentation({ setContent, content }) {
 
     const Logo = [
@@ -18,13 +20,7 @@ function Presentation({ setContent, content }) {
 
     return (
         <div className='presentation'>
-            <div className='presentation-info'>
-                <div className='presentation-info_sub'>
-                    <p className='presentation-info_sub-p1'>Bonjour, je m'appelle Jordan</p>
-                    <p className='presentation-info_sub-p2'>Je suis Développeur Web<span className="presentation-info_sub_anim">_</span></p>
-                </div>
-                <div className='presentation-profil'></div>
-            </div>
+                                <ThemeToggleButton />
             <div className='presentation-tags'>
                 <h2>Me contacter</h2>
                 <div className="presentation-tags_contact">
@@ -33,10 +29,18 @@ function Presentation({ setContent, content }) {
                     )}
                 </div>
             </div>
+            <div className='presentation-info'>
+                <div className='presentation-info_sub'>
+                    <p className='presentation-info_sub-p1'>Bonjour, je m'appelle Jordan</p>
+                    <p className='presentation-info_sub-p2'>Je suis Développeur Web<span className="presentation-info_sub_anim">_</span></p>
+                </div>
+                <div className='presentation-profil'></div>
+            </div>
+
             <div className='Header'>
                 <div className={`presentation-try ${isActive('About')}`}>
                     <div className="presentation-tiret"></div>
-                    <button className='presentation-btn' onClick={() => setContent("About")}>A propos</button>
+                    <button className='presentation-btn' onClick={() => setContent("About")}>Présentation</button>
                 </div>
                 <div className={`presentation-try ${isActive('Website')}`}>
                     <div className="presentation-tiret"></div>

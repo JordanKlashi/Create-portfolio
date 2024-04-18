@@ -13,7 +13,7 @@ const Website = ({ onProjectSelect }) => {
       ],
       onImage:"https://jordanklashi.github.io/project-11/",      
       description: "Projet : Site complet en React-Redux, utilisation de MongoDB, appels d'API, hooks, actions, reducers, et toolkit Thunk.", 
-      type: 'React', 
+      type: "React & Redux",
       url: 'https://jordanklashi.github.io/project-11/',
       code: 'https://github.com/JordanKlashi/project-11',
     },
@@ -26,7 +26,7 @@ const Website = ({ onProjectSelect }) => {
       ],
       onImage:'https://jordanklashi.github.io/Projet-2/',
       description: "Découverte du HTML : Amélioration d'un site existant en ajoutant une section membres et des boutons pour les nouveaux horaires.", 
-      type: 'HTML', 
+      type: 'HTML & Sass', 
       url: 'https://jordanklashi.github.io/Projet-2/',
       code: 'https://github.com/JordanKlashi/Projet-2' 
     },
@@ -40,7 +40,7 @@ const Website = ({ onProjectSelect }) => {
       ],
       onImage:'https://jordanklashi.github.io/Projet-3/',
       description: "Approfondissement HTML/CSS : Configuration de l'environnement de développement, découpage de la maquette, intégration du header, formulaire de recherche, filtres, cartes, conteneurs, footer, adaptation responsive et vérification de la qualité du code.", 
-      type: 'HTML', 
+      type: 'HTML & Sass', 
       url: 'https://jordanklashi.github.io/Projet-3/',
       code: 'https://github.com/JordanKlashi/Projet-3' 
     },
@@ -54,7 +54,7 @@ const Website = ({ onProjectSelect }) => {
       ],
       onImage:"https://jordanklashi.github.io/Projet-4/index.html",      
       description: "Initiation à Sass : Configuration de l'environnement, intégration de la version mobile, animations et vérification de la qualité du code.",
-      type: 'HTML',
+      type: 'HTML & Sass',
       url: 'https://jordanklashi.github.io/Projet-4/index.html',
       code: 'https://github.com/JordanKlashi/Projet-4'  
     },
@@ -82,7 +82,7 @@ const Website = ({ onProjectSelect }) => {
       ],
       onImage:"https://jordanklashi.github.io/Projet-6-Frontend/",      
       description: "Projet : Site pour photographe en JavaScript, communication avec API RESTful, création d'une page de connexion utilisateur fonctionnelle, ajout dynamique de photos via une modale.", 
-      type: 'Javascript',
+      type: 'Javascript & Backend',
       url: 'https://jordanklashi.github.io/Projet-6-Frontend/',
       code: 'https://github.com/JordanKlashi/Projet-6'  
     },
@@ -121,7 +121,7 @@ const Website = ({ onProjectSelect }) => {
       ],
       onImage:"./data/doc/Lighthouse Report Viewer.pdf",      
       description: "Projet SEO : Optimisations SEO, performances du site, référencement local et sur les réseaux sociaux, accessibilité améliorée, rapports finaux d'optimisation.", 
-      type: 'SEO', 
+      type: 'SEO & Optimisation', 
       url: 'https://jordanklashi.github.io/Projet-9/',
       code: 'https://github.com/JordanKlashi/Projet-9' 
     },

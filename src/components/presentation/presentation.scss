@@ -1,9 +1,10 @@
 .Header {
     opacity:0;
-    transform:translateX(100px);
-    animation:apparition 2s 4s ease-out forwards; 
+    transform:translateX(300px);
+    animation:apparition 0.5s 4s ease-out forwards; 
     display: flex;
     flex-direction: column;
+    gap:5px;
     & button{
         font-family: "Orbitron", sans-serif;
         cursor: pointer;
@@ -33,10 +34,9 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 50px;
         &_sub {
-            padding: 30px;
-            color:$var-color-green;
+            padding: 130px 30px;
+            color:var(--color-green);
             &-p1{
                 width:0%;
                 animation:typewriterpres 2s 0.5s ease-out forwards;
@@ -75,14 +75,14 @@
 
     &.active .presentation-btn,
     &:hover .presentation-btn {
-        color: $var-color-green; 
+        color: var(--color-active); 
         font-size:larger;
     }
 }
 
 .presentation-tiret {
-    border: 1px $var-color-green solid;
-    background-color: $var-color-green;
+    border: 1px var(--color-green) solid;
+    background-color: var(--color-green);
     height: 1px;
     width: 30px;
     transition: width 0.3s ease;
@@ -91,7 +91,7 @@
 .presentation-btn {
     background-color: rgba(2, 2, 73, 0.123);
     opacity: 0.8; 
-    color:$var-color-secondary;
+    color:var(--color-secondary);
     font-size: 1rem;
     border-radius: 25px;
     padding: 5px 10px;
@@ -106,12 +106,12 @@
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
-        padding:110px 0px;
+        padding: 0px;
         opacity:0;
-        transform:translateX(100px);
-        animation:apparition 2s 4s ease-out forwards; 
+        transform:translateX(300px);
+        animation:apparition 0.5s 4s ease-out forwards; 
         & h2 {
-            color:aquamarine;
+            color:var(--color-green);
         }
         &_contact {
             opacity:0.9;
@@ -144,13 +144,13 @@
 
     &.active .presentation-btn,
     &:hover .presentation-btn {
-        color: $var-color-green; 
+        color: var(--color-green); 
         font-size:larger;
     }
 }
 .presentation-tiret {
-    border: 1px $var-color-green solid;
-    background-color: $var-color-green;
+    border: 1px var(--color-green) solid;
+    background-color: var(--color-green);
     height: 1px;
     width: 30px;
     transition: width 0.3s ease;
@@ -158,7 +158,7 @@
 .presentation-btn {
     background-color: rgba(2, 2, 73, 0.123);
     opacity: 0.8; 
-    color:$var-color-secondary;
+    color:var(--color-secondary);
     font-size: 1rem;
     border-radius: 25px;
     padding: 5px 10px;
