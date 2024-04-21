@@ -20,8 +20,7 @@ function Presentation({ setContent, content }) {
 
     return (
         <>
-                                        <ThemeToggleButton />
-
+        <ThemeToggleButton />
         <div className='presentation'>
             <div className='presentation-tags'>
                 <h2>Me contacter</h2>
