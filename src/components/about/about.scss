@@ -4,6 +4,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 800px;
+    margin:20px;
     & img {
         width: 150px;
         opacity: 0.9;
@@ -25,6 +26,7 @@
     width:0%;
     transform:translateX(30px);
     opacity:0;
+    text-align: justify;
 }
 .about-text_anim {
 

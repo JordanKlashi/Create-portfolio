@@ -1,12 +1,12 @@
 :root {
-    --color-primary: rgb(255, 255, 255);
-    --color-secondary: #ffffff;
+    --color-primary: rgb(0, 0, 0);
+    --color-secondary: #000000;
     --color-background: rgb(53, 121, 112);
-    --color-green: rgb(255, 255, 255);
+    --color-green: rgb(0, 0, 0);
     --font-title: "Orbitron", sans-serif;
     --back-card: rgba(128, 128, 128, 0.589);
     --back-modal: rgba(0, 85, 74, 0.877);
-    --color-active: black;
+    --color-active: rgb(255, 255, 255);
   }
   
   
@@ -51,7 +51,7 @@ body {
     display: flex;
     justify-content: center;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1250px) {
     .container {
         flex-direction: column;
         height: auto; 

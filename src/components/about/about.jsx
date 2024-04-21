@@ -26,7 +26,7 @@ function About() {
             <h3>Présentation</h3>
               <div className='about-text'>
                   {texts.map((text, i) => (
-                    <p className='about-text_anim'>{text.t}</p>
+                    <p key={i} className='about-text_anim'>{text.t}</p>
                 ))}
               </div>
           </div>

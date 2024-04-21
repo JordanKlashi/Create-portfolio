@@ -132,10 +132,10 @@ const Website = ({ onProjectSelect }) => {
         {src: './data/img/photoSite/projet9/photo1.png'}, 
         {src: './data/img/photoSite/projet9/photo2.png'}
       ],
-      onImage:"https://jordanklashi.github.io/Projet-10/",      
+      onImage:"https://jordanklashi.github.io/event/",      
       description: "Projet : Utilisation d'outils de débogage (React Developer Tools), création de tests unitaires, présentation des erreurs et solutions apportées.", 
       type: 'React',
-      url: 'https://jordanklashi.github.io/Projet-10/' ,
+      url: 'https://jordanklashi.github.io/event/' ,
       code: 'https://github.com/JordanKlashi/Debuggez-une-application-React.JS-main' 
     }
   ];

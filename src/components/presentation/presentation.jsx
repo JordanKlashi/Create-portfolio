@@ -19,8 +19,10 @@ function Presentation({ setContent, content }) {
     const isActive = (section) => content === section ? 'active' : '';
 
     return (
+        <>
+                                        <ThemeToggleButton />
+
         <div className='presentation'>
-                                <ThemeToggleButton />
             <div className='presentation-tags'>
                 <h2>Me contacter</h2>
                 <div className="presentation-tags_contact">
@@ -52,6 +54,7 @@ function Presentation({ setContent, content }) {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
