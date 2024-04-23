@@ -128,6 +128,7 @@
     width:250px;
     & img {
       width:250px;
+      height:180px;
     }
   }
   .imgtest:first-child {
@@ -140,16 +141,19 @@
     width:250px;
     & img {
       width:250px;
+      height:180px;
     }  }
 }
-@media (max-width:1500px) {
+@media (max-width:900px) {
   .imgtest.middle {
   width:200px;
   & img {
     width:200px;
+    height:130px;
   }
 }
 .imgtest:first-child {
+  display:none;
   width:200px;
   & img {
     width:200px;
@@ -157,19 +161,10 @@
 
 .imgtest:last-child {
   width:200px;
+  display:none;
   & img {
     width:200px;
   }  }
-}
-@media (max-width:900px) {
-  .imgtest:first-child {
-    display:none;
-  }
-
-  .imgtest:last-child {
-    display:none;
-  }
-
   .carousel-controls{
     .fa-chevron-left, .fa-chevron-right{
       padding:10px;

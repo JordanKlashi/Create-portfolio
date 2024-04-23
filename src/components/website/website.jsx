@@ -144,15 +144,13 @@ const Website = ({ onProjectSelect }) => {
   const [ProjectOnTop, setProjectOnTop] = useState(projectsData.slice(0, 3));
 
   const updateProjectsToShow = (newIndex) => {
-    // Calcule les indices des projets à afficher
     const firstIndex = newIndex - 1 < 0 ? projectsData.length - 1 : newIndex - 1;
     const secondIndex = newIndex;
     const thirdIndex = (newIndex + 1) % projectsData.length;
   
-    // Met à jour le tableau des projets à mettre en avant
+
     const tab = [projectsData[firstIndex], projectsData[secondIndex], projectsData[thirdIndex]];
   
-    // Mise à jour de l'état pour les projets à afficher
     setProjectOnTop(tab);
   };
   
