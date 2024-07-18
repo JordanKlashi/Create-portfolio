@@ -9,12 +9,12 @@ function Stack() {
         description: "Optimisation de votre site pour les moteurs de recherche afin d'améliorer sa visibilité et d'attirer un trafic ciblé, en utilisant les dernières techniques et outils SEO.",        fa: faCrosshairs
     },
     {
-        title: "Développement Web",
-        description: "Conception et développement de sites web dynamiques et performants, de simples pages HTML/CSS à des applications web complexes en utilisant des frameworks modernes.",        fa: faCode
+        title: "Front-End",
+        description: "Expertise en développement d'interfaces utilisateur élégantes et responsives avec HTML et CSS. Création d'expériences utilisateur dynamiques et performantes en utilisant JavaScript, la bibliothèque React et le framework Next.js.",        fa: faDisplay
     },
     {
-        title: "Multi-Plateforme",
-        description: "Création de sites web réactifs qui offrent une expérience utilisateur fluide sur tous les appareils, des desktops aux smartphones, en assurant un design élégant et fonctionnel.",        fa: faDisplay
+        title: "Back-End",
+        description: "Développement de l'architecture serveur avec Node.js et Express pour créer des applications web robustes, évolutives et sécurisées. Intégration de bases de données, gestion des APIs RESTful et optimisation des performances pour une expérience utilisateur fluide.",        fa: faCode
     },
     {
         title: "Développeur Agile",
@@ -28,7 +28,7 @@ function Stack() {
           <div className="stack">
               <h2 className='stack-title'>Mes compétences</h2>
               <div>                
-                <div className='stack-board'>
+                <div className='stack-board' id="stack-anchor">
                 {Stacks.map((comp, index) => 
                     <div itemScope itemType='https://schema.org/Occupation' className='stack-card' key={index} >
                     <h3 itemProp='qualifications' className='stack-card_title'>{comp.title}</h3>

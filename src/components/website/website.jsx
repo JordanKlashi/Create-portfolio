@@ -18,19 +18,6 @@ const Website = ({ onProjectSelect }) => {
       code: 'https://github.com/JordanKlashi/project-11',
     },
     { 
-      id:0,
-      title: 'Mes premiers pas sur le langage HTML', 
-      img:[ 
-        {src: "./data/img/photoSite/projet1/photo1.png"}, 
-        {src: "./data/img/photoSite/projet1/photo2.png"},
-      ],
-      onImage:'https://jordanklashi.github.io/Projet-2/',
-      description: "Découverte du HTML : Amélioration d'un site existant en ajoutant une section membres et des boutons pour les nouveaux horaires.", 
-      type: 'HTML & Sass', 
-      url: 'https://jordanklashi.github.io/Projet-2/',
-      code: 'https://github.com/JordanKlashi/Projet-2' 
-    },
-    { 
       id:1,
       title: "Créez la page d'agence de voyage en HMTL & CSS", 
       img:[ 
@@ -125,19 +112,33 @@ const Website = ({ onProjectSelect }) => {
       url: 'https://jordanklashi.github.io/Projet-9/',
       code: 'https://github.com/JordanKlashi/Projet-9' 
     },
-    { 
-      id:8,
-      title: "Débuggez le site d'une agence d'événementiel", 
-      img:[ 
-        {src: './data/img/photoSite/projet9/photo1.png'}, 
-        {src: './data/img/photoSite/projet9/photo2.png'}
-      ],
-      onImage:"https://jordanklashi.github.io/event/",      
-      description: "Projet : Utilisation d'outils de débogage (React Developer Tools), création de tests unitaires, présentation des erreurs et solutions apportées.", 
-      type: 'React',
-      url: 'https://jordanklashi.github.io/event/' ,
-      code: 'https://github.com/JordanKlashi/Debuggez-une-application-React.JS-main' 
-    }
+    // { 
+    //   id:0,
+    //   title: 'Mes premiers pas sur le langage HTML', 
+    //   img:[ 
+    //     {src: "./data/img/photoSite/projet1/photo1.png"}, 
+    //     {src: "./data/img/photoSite/projet1/photo2.png"},
+    //   ],
+    //   onImage:'https://jordanklashi.github.io/Projet-2/',
+    //   description: "Découverte du HTML : Amélioration d'un site existant en ajoutant une section membres et des boutons pour les nouveaux horaires.", 
+    //   type: 'HTML & Sass', 
+    //   url: 'https://jordanklashi.github.io/Projet-2/',
+    //   code: 'https://github.com/JordanKlashi/Projet-2' 
+    // },
+   
+    // { 
+    //   id:8,
+    //   title: "Débuggez le site d'une agence d'événementiel", 
+    //   img:[ 
+    //     {src: './data/img/photoSite/projet9/photo1.png'}, 
+    //     {src: './data/img/photoSite/projet9/photo2.png'}
+    //   ],
+    //   onImage:"https://jordanklashi.github.io/event/",      
+    //   description: "Projet : Utilisation d'outils de débogage (React Developer Tools), création de tests unitaires, présentation des erreurs et solutions apportées.", 
+    //   type: 'React',
+    //   url: 'https://jordanklashi.github.io/event/' ,
+    //   code: 'https://github.com/JordanKlashi/Debuggez-une-application-React.JS-main' 
+    // }
   ];
 
   const [currentStartIndex, setCurrentStartIndex] = useState(1);
@@ -171,7 +172,7 @@ const Website = ({ onProjectSelect }) => {
   };
   return (
       <div className="content">
-          <div className="website">
+          <div className="website" id="website-anchor">
             <h2 className="website-title">Mes projets</h2>
             <div className="carousel-controls">              
               <FontAwesomeIcon icon={faChevronLeft} onClick={() => goToPrevious()} />
@@ -183,7 +184,7 @@ const Website = ({ onProjectSelect }) => {
                 onClick={() => onProjectSelect(project)}
               >
                 <img src={project.img[0].src} alt="Project Logo" />
-                <p>PROJET {project.id +1}</p>
+                <p>PROJET {project.id }</p>
                 <div>{project.type}</div>
 
               </div>

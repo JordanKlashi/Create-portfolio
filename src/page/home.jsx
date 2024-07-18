@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import Presentation from '../components/presentation/presentation.jsx';
 import Website from '../components/website/website.jsx';
@@ -11,6 +11,7 @@ import Stack from "../components/stack/stack.jsx";
 function Home() {
     const [content, setContent] = useState('');
     const [selectedProject, setSelectedProject] = useState(null);
+    const [anchorId, setAnchorId] = useState(null);
 
     const showProject = (project) => {
         setSelectedProject(project);
@@ -20,6 +21,21 @@ function Home() {
         setContent("Website");
         setSelectedProject(null);
     };
+    const handleContentChange = (newContent, newAnchorId) => {
+        setContent(newContent);
+        setAnchorId(newAnchorId);
+    };
+
+    useEffect(() => {
+        if (anchorId) {
+            setTimeout(() => {
+                const element = document.getElementById(anchorId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 1000); // supposons que l'animation dure 2000ms
+        }
+    }, [anchorId]);
 
     return (
         <div className="container">
@@ -28,7 +44,7 @@ function Home() {
             <video id='background-video' src={videoSrc} autoPlay muted loop></video></div> 
             
                 <div className="sidebar">
-                        <Presentation setContent={setContent} content={content}/>
+                        <Presentation setContent={handleContentChange} content={content}/>
                 </div>
                 <SwitchTransition mode="out-in">
                     <CSSTransition

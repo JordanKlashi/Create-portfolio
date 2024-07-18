@@ -1,4 +1,3 @@
-import ThemeToggleButton from "../Theme/toogletheme";
 
 function Presentation({ setContent, content }) {
 
@@ -20,7 +19,6 @@ function Presentation({ setContent, content }) {
 
     return (
         <>
-            <ThemeToggleButton />
             <div className='presentation'>
                 <div className='presentation-tags'>
                     <h2>Me contacter</h2>
@@ -41,15 +39,15 @@ function Presentation({ setContent, content }) {
                 <div className='Header'>
                     <div className={`presentation-try ${isActive('About')}`}>
                         <div className="presentation-tiret"></div>
-                        <button className='presentation-btn' onClick={() => setContent("About")}>Présentation</button>
+                        <button className='presentation-btn' onClick={() => setContent("About", "about-anchor")}>Présentation</button>
                     </div>
                     <div className={`presentation-try ${isActive('Website')}`}>
                         <div className="presentation-tiret"></div>
-                        <button className='presentation-btn' onClick={() => setContent("Website")}>Mes projets</button>
+                        <button className='presentation-btn' onClick={() => setContent("Website", "website-anchor")}>Mes projets</button>
                     </div>
                     <div className={`presentation-try ${isActive('Stack')}`}>
                         <div className="presentation-tiret"></div>
-                        <button className='presentation-btn' onClick={() => setContent("Stack")}>Mes compétences</button>
+                        <button className='presentation-btn' onClick={() => setContent("Stack", "stack-anchor")}>Mes compétences</button>
                     </div>
                 </div>
             </div>
